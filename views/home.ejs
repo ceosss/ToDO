@@ -1,22 +1,23 @@
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ToDo | SwaRaj</title>
-    <link rel="icon" type="image/ico" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmdiGnd7MYeL0AvnHEzeBH39JNfYaGBc7F8nH7X9nPm22916R4CA">
+    <link rel="icon" type="image/ico"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmdiGnd7MYeL0AvnHEzeBH39JNfYaGBc7F8nH7X9nPm22916R4CA">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style type="text/css">
-    
-        body{
+        body {
             font-family: "Montserrat";
             background: #b7abf3;
         }
-        
-        #date-div{
-            
+
+        #date-div {
+
             text-align: center;
             /* margin-top: 50px; */
             margin-right: 10%;
@@ -25,7 +26,8 @@
             color: white;
             background: #8c7ae6;
         }
-        #item-div{
+
+        #item-div {
             border: 2px solid #D8D8D8;
             display: flex;
             align-items: center;
@@ -34,7 +36,8 @@
             margin-left: 10%;
             margin-top: 7%;
         }
-        .div-row{
+
+        .div-row {
             padding-top: 10px;
             display: flex;
             align-items: center;
@@ -42,78 +45,217 @@
             font-size: 20px;
             font-weight: 600;
             /* border: 1px solid black; */
-            
+
         }
-        #form-div{
-            
+
+        #form-div {
+
             margin-top: 3%;
             padding-left: 18px;
             font-weight: 700;
-            
+            padding-bottom: 3%;
+
         }
-        .inp{
-            width: 60px;
-            
-        }
-        .form-row{
+
+        .form-row {
             margin-right: 10%;
             margin-left: 10%;
             position: relative;
         }
-        .footer{
+
+        .footer {
             text-align: center;
-            position: absolute;
-            bottom: 3%;
-            right:45%;
-            
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #b7abf3;
+
+        }
+
+        #btn-rit {
+            right: 7;
+        }
+
+        .p-size {
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            body {
+                background-color: lightblue;
+            }
+
+            #item-div {
+                border: 2px solid #D8D8D8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1%;
+                padding-left: 2%;
+                margin-right: 1%;
+                margin-left: 1%;
+                margin-top: 7%;
+            }
+
+            .div-row {
+                padding-top: 10px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                font-size: 20px;
+                font-weight: 600;
+                /* border: 1px solid black; */
+
+            }
+
+            .footer {
+                background-color: lightblue;
+
+            }
+
+            .form-row {
+                margin-right: 1%;
+                margin-left: 1%;
+                position: relative;
+            }
+
+            #form-div {
+                width: 60%;
+                margin-top: 3%;
+                /* padding-top: 5px; */
+                /* padding-left: 18px; */
+                font-weight: 700;
+
+            }
+
+            #btn-rit {
+                right: 16;
+            }
+
+
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 769px) {
+            #form-div {
+                width: 50%;
+
+
+            }
+
+            body {
+                background-color: Tomato;
+            }
+        }
+
+        @media screen and (max-width:400px) and (min-width:384px) {
+            body {
+
+                background-color: SlateBlue;
+            }
+
+            #form-div {
+                width: 45%;
+
+
+            }
+
+            .p-size {
+                font-size: 17px;
+            }
+        }
+
+        @media screen and (max-width:383px) {
+            body {
+
+                background-color: SlateBlue;
+            }
+
+            #form-div {
+                width: 25%;
+
+
+
+            }
+
+            .p-size {
+                font-size: 17px;
+            }
+        }
+
+        @media screen and (max-width:488px) and (min-width:385) {
+            body {
+
+                background-color: SlateBlue;
+            }
+
+            #form-div {
+                width: 40%;
+
+
+
+            }
+
+            .p-size {
+                font-size: 17px;
+            }
         }
     </style>
 
-     
+
 </head>
+
 <body>
     <div class="container">
-            <div style="margin-top:50px" id="date-div">
-                    <h1 style="font-weight:bolder;" id="span"></h1>
-            </div>
-            <div id="date-div">
-                    <h1 style="font-weight:bolder;" id="date"></h1>
-            </div>
-    
-    
-    
-<div id="item-div">
-
-        <div class="col">
-
-        
-                <% for(var i=0;i<todo.length; i++){ %>
-                    <div class="row div-row" >
-                            <p style="margin-top: 5px"><%= todo[i].id %>.  <%= todo[i].name %> = <%= todo[i].start %> -> <%= todo[i].end %> </p>
-                            <a style="position: absolute; margin-top: -5px; right: 7; width: 80px; background-color: #8c7ae6" class="btn btn-primary" href="del/<%=todo[i]._id %>">Delete</a><br>
-                    </div>  
-                <% } %>
-        </div>    
-
-</div>
-<div class="row form-row">
-
-        <form id="form-div" action="/" method="POST">
-            No. : <input class="inp" type="number" name="id">
-            Item : <input class="inp" type="text" name="item">
-            From : <input class="inp" type="number" name="from">
-            To : <input class="inp" type="number" name="to">
-            <button style="position: absolute; margin-top: -35px; right: 7; width: 80px; background-color: #8c7ae6" class="btn btn-primary">ADD</button>
-            </form>
-</div>
-
-
-</div>
-
-        <div class="footer">
-            © 2019 Copyright by
-        <a href="https://www.instagram.com/ceo.sss" target="blank">@ceo.sss</a>
+        <div style="margin-top:50px" id="date-div">
+            <h1 style="font-weight:bolder;" id="span"></h1>
         </div>
+        <div id="date-div">
+            <h1 style="font-weight:bolder;" id="date"></h1>
+        </div>
+
+
+
+        <div id="item-div">
+
+            <div class="col">
+
+
+                <% for(var i=0;i<todo.length; i++){ %>
+                <div class="row div-row">
+                    <p class="p-size" style="margin-top: 5px"><%= todo[i].id %>. <%= todo[i].name %> =
+                        <%= todo[i].start %> -> <%= todo[i].end %> </p>
+                    <a style="position: absolute; margin-top: -5px; right: 7; width: 80px; background-color: #8c7ae6"
+                        class="btn btn-primary" href="del/<%=todo[i]._id %>">Delete</a><br>
+                </div>
+                <% } %>
+            </div>
+
+        </div>
+        <div class="row form-row">
+
+            <form id="form-div" action="/" method="POST">
+                <span class="p-size">No. : </span><input style="width: 50px; margin-top: 10px;" class="inp"
+                    type="number" name="id">
+                <span class="p-size">Name : </span><input style="width: 74px; margin-top: 10px;" class="inp" type="text"
+                    name="item">
+                <span class="p-size">From : </span><input style="width: 70px; margin-top: 10px;" class="inp"
+                    type="number" name="from">
+                <span class="p-size">To : </span><input style="width: 70px; margin-top: 10px;" class="inp" type="number"
+                    name="to">
+                <button style="position: absolute; margin-top: -35px;  width: 80px; background-color: #8c7ae6"
+                    class="btn btn-primary" id="btn-rit">ADD</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+
+        © 2019 Copyright by
+        <strong><a style="color: red" href="https://www.instagram.com/ceo.sss" target="blank">@ceo.sss</a></strong>
+
+    </div>
 
 
 
@@ -133,25 +275,27 @@
 
     <script>
         var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+            "November", "December"
+        ];
         var dates = new Date(),
-        date = dates.getDate(),
-        month = dates.getMonth(),
-        day = dates.getDay();
-        document.getElementById("date").innerHTML = days[day]+', '+months[month]+' '+date;
+            date = dates.getDate(),
+            month = dates.getMonth(),
+            day = dates.getDay();
+        document.getElementById("date").innerHTML = days[day] + ', ' + months[month] + ' ' + date;
         var span = document.getElementById('span');
 
         function time() {
-        var d = new Date();
-        var s = d.getSeconds();
-        var m = d.getMinutes();
-        var h = d.getHours();
-        span.textContent = h + " : " + m + " : " + s;
+            var d = new Date();
+            var s = d.getSeconds();
+            var m = d.getMinutes();
+            var h = d.getHours();
+            span.textContent = h + " : " + m + " : " + s;
         }
 
         setInterval(time, 1000);
     </script>
 
 </body>
-</html>
 
+</html>
