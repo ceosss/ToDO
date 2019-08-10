@@ -1,3 +1,5 @@
+// Created By Swaraj
+// LIVE: http://bit.ly/33rm24z
 var express = require("express"),
     app = express(),
     bodyParser = require("body-parser"),
@@ -20,7 +22,7 @@ var todo = mongoose.model("todo",todoSchema);
 
 // todo.create({
 //     id: 1,
-//     name: "Sex",
+//     name: "Swaraj",
 //     start: 10,
 //     end: 12
 // },function(err,added){
@@ -35,7 +37,7 @@ var todo = mongoose.model("todo",todoSchema);
 // var list = [
 //     {
 //         id: 1,
-//         name: "Sex",
+//         name: "Swaraj",
 //         start: 10,
 //         end: 12
 //     }
